@@ -1,0 +1,14 @@
+Option 1: Im Datei-Explorer versteckte Ordner anzeigen
+Öffne den Datei-Explorer.
+
+Klicke auf das Ordnersymbol in der Taskleiste oder drücke Win + E auf deiner Tastatur.
+Navigiere zur Ansicht-Einstellungen:
+
+Klicke oben rechts auf die drei Punkte (Mehr Optionen).
+Wähle Optionen aus dem Dropdown-Menü aus.
+Versteckte Dateien und Ordner anzeigen:
+
+Im Fenster „Ordnersoptionen“ wähle die Registerkarte Ansicht.
+Scrolle nach unten und finde die Option Versteckte Dateien, Ordner und Laufwerke anzeigen.
+Wähle Versteckte Dateien, Ordner und Laufwerke anzeigen und klicke auf OK.
+Jetzt solltest du versteckte Ordner und Dateien im Datei-Explorer sehen können.

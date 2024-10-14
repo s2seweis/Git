@@ -1,0 +1,143 @@
+### 1. **Navigieren im Dateisystem**
+- `pwd` (Linux) entspricht `Get-Location` in PowerShell.
+  ```powershell
+  Get-Location
+  ```
+
+- `ls` (Linux) entspricht `dir` in der Windows-Eingabeaufforderung oder PowerShell.
+  ```powershell
+  dir
+  ```
+
+- `cd` funktioniert genauso wie in Linux, um das Verzeichnis zu wechseln.
+  ```powershell
+  cd Pfad\zum\Verzeichnis
+  ```
+
+- `cd ..` funktioniert auch in Windows, um ein Verzeichnis nach oben zu wechseln.
+  ```powershell
+  cd ..
+  ```
+
+- `cd ~` funktioniert in PowerShell, um ins Home-Verzeichnis zu wechseln.
+  ```powershell
+  cd ~
+  ```
+
+### 2. **Dateioperationen**
+- **`touch` (Linux)** funktioniert nicht direkt in Windows, aber du kannst in PowerShell eine leere Datei so erstellen:
+  ```powershell
+  New-Item Datei.txt
+  ```
+
+- `cat` (Linux) funktioniert auch in PowerShell und zeigt den Inhalt einer Datei an:
+  ```powershell
+  Get-Content datei.txt
+  ```
+
+- `cp` (Linux) funktioniert in PowerShell mit demselben Befehl:
+  ```powershell
+  Copy-Item quelle.txt ziel.txt
+  ```
+
+- `mv` (Linux) funktioniert auch in PowerShell:
+  ```powershell
+  Move-Item alte_datei.txt neue_datei.txt
+  ```
+
+- **`rm` (Linux)** entspricht `Remove-Item` in PowerShell, um eine Datei zu löschen:
+  ```powershell
+  Remove-Item datei.txt
+  ```
+
+- Um ein Verzeichnis rekursiv zu löschen, benutze `-Recurse` in PowerShell:
+  ```powershell
+  Remove-Item verzeichnis -Recurse
+  ```
+
+### 3. **Verzeichnisse erstellen und löschen**
+- `mkdir` funktioniert sowohl in der Eingabeaufforderung als auch in PowerShell:
+  ```powershell
+  mkdir neues_verzeichnis
+  ```
+
+- `rmdir` funktioniert auch in der Windows-Eingabeaufforderung und PowerShell:
+  ```powershell
+  rmdir verzeichnis
+  ```
+
+### 4. **Berechtigungen und Eigentümer**
+- Diese Befehle wie `chmod` und `chown` sind typisch für Unix-basierte Systeme und funktionieren nicht direkt in Windows. Berechtigungen kannst du aber über die Windows-Benutzeroberfläche oder spezielle CMDlets in PowerShell anpassen.
+
+### 5. **Systeminformationen**
+- `df -h` hat kein direktes Äquivalent in Windows. Du kannst jedoch den Befehl `Get-PSDrive` in PowerShell verwenden:
+  ```powershell
+  Get-PSDrive
+  ```
+
+- `top` hat kein direktes Äquivalent, aber du kannst den Task-Manager öffnen oder den Befehl `Get-Process` verwenden:
+  ```powershell
+  Get-Process
+  ```
+
+- `uname -a` funktioniert in Windows nicht direkt. Du kannst aber PowerShell verwenden, um Betriebssysteminformationen anzuzeigen:
+  ```powershell
+  Get-ComputerInfo
+  ```
+
+### 6. **Netzwerk**
+- `ping` funktioniert sowohl in Windows als auch in Linux gleich:
+  ```powershell
+  ping google.com
+  ```
+
+- **`ifconfig`** gibt es in Windows nicht, du kannst stattdessen `ipconfig` verwenden:
+  ```powershell
+  ipconfig
+  ```
+
+- **`curl`** funktioniert in PowerShell genauso wie in Linux:
+  ```powershell
+  curl http://example.com
+  ```
+
+### 7. **Pakete verwalten**
+In Windows gibt es kein direktes Paketverwaltungssystem wie `apt`, aber du kannst den Windows-Paketmanager `winget` oder `chocolatey` verwenden, um Software zu installieren. Beispiel für `winget`:
+  ```powershell
+  winget install Paketname
+  ```
+
+### 8. **Dateisuche**
+- **`find` (Linux)** hat kein direktes Äquivalent in Windows, aber du kannst PowerShell verwenden:
+  ```powershell
+  Get-ChildItem -Recurse -Filter "dateiname"
+  ```
+
+- **`grep` (Linux)** kann durch `Select-String` in PowerShell ersetzt werden:
+  ```powershell
+  Select-String -Pattern "suchbegriff" datei.txt
+  ```
+
+### 9. **Dateikompression**
+- Um Dateien zu komprimieren, kannst du `Compress-Archive` in PowerShell verwenden:
+  ```powershell
+  Compress-Archive -Path datei.txt -DestinationPath archiv.zip
+  ```
+
+- Zum Entpacken verwendest du `Expand-Archive`:
+  ```powershell
+  Expand-Archive -Path archiv.zip -DestinationPath .
+  ```
+
+### 10. **Prozessverwaltung**
+- `ps` hat kein direktes Äquivalent, aber du kannst `Get-Process` verwenden:
+  ```powershell
+  Get-Process
+  ```
+
+- Um einen Prozess zu beenden, kannst du `Stop-Process` in PowerShell verwenden:
+  ```powershell
+  Stop-Process -Id 1234
+  ```
+
+Diese Liste gibt dir die wichtigsten Befehle für die Windows-Terminalumgebung, angepasst an PowerShell und CMD.

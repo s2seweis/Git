@@ -1,0 +1,168 @@
+Here are the basic **Git commands** you'll commonly use when working with version control:
+
+### 1. **Setup & Configuration**
+- `git config`  
+  Configures user information for all local repositories.
+  ```bash
+  git config --global user.name "Your Name"
+  git config --global user.email "you@example.com"
+  ```
+
+### 2. **Repository Management**
+- `git init`  
+  Initializes a new Git repository.
+  ```bash
+  git init
+  ```
+
+- `git clone`  
+  Clones a remote repository to your local machine.
+  ```bash
+  git clone https://github.com/user/repo.git
+  ```
+
+### 3. **Staging & Committing Changes**
+- `git status`  
+  Shows the current state of the working directory and staging area.
+  ```bash
+  git status
+  ```
+
+- `git add`  
+  Adds changes from the working directory to the staging area.
+  ```bash
+  git add <file>          # Adds a specific file
+  git add .               # Adds all changed files
+  ```
+
+- `git commit`  
+  Records a snapshot of the changes in the staging area to the repository.
+  ```bash
+  git commit -m "Commit message"
+  ```
+
+### 4. **Viewing Commit History**
+- `git log`  
+  Shows the commit history.
+  ```bash
+  git log
+  ```
+
+- `git log --oneline`  
+  Displays the commit history in a condensed one-line format.
+  ```bash
+  git log --oneline
+  ```
+
+### 5. **Branching & Merging**
+- `git branch`  
+  Lists all branches or creates a new branch.
+  ```bash
+  git branch              # Lists branches
+  git branch <branchname>  # Creates a new branch
+  ```
+
+- `git checkout`  
+  Switches to another branch.
+  ```bash
+  git checkout <branchname>
+  ```
+
+- `git checkout -b`  
+  Creates and switches to a new branch.
+  ```bash
+  git checkout -b <branchname>
+  ```
+
+- `git merge`  
+  Merges the specified branch into the current branch.
+  ```bash
+  git merge <branchname>
+  ```
+
+### 6. **Remote Repositories**
+- `git remote`  
+  Manages remote repositories.
+  ```bash
+  git remote -v                  # Lists remote repositories
+  git remote add origin <url>     # Adds a new remote repository
+  ```
+
+- `git fetch`  
+  Downloads objects and references from a remote repository.
+  ```bash
+  git fetch
+  ```
+
+- `git pull`  
+  Fetches changes from the remote repository and merges them into your local branch.
+  ```bash
+  git pull
+  ```
+
+- `git push`  
+  Uploads local branch commits to the remote repository.
+  ```bash
+  git push origin <branchname>
+  ```
+
+### 7. **Undoing Changes**
+- `git reset`  
+  Unstages changes in the staging area.
+  ```bash
+  git reset <file>
+  ```
+
+- `git reset --hard`  
+  Resets the index and working directory to the last commit, discarding all changes.
+  ```bash
+  git reset --hard
+  ```
+
+- `git checkout -- <file>`  
+  Discards changes in the working directory (local modifications).
+  ```bash
+  git checkout -- <file>
+  ```
+
+### 8. **Tagging**
+- `git tag`  
+  Creates a tag for a specific commit.
+  ```bash
+  git tag <tagname>                 # Creates a lightweight tag
+  git tag -a <tagname> -m "message" # Creates an annotated tag
+  ```
+
+- `git push --tags`  
+  Pushes tags to a remote repository.
+  ```bash
+  git push --tags
+  ```
+
+### 9. **Stashing**
+- `git stash`  
+  Temporarily saves changes that are not ready to be committed.
+  ```bash
+  git stash
+  ```
+
+- `git stash pop`  
+  Applies the most recent stash and removes it from the stash list.
+  ```bash
+  git stash pop
+  ```
+
+### 10. **Other Useful Commands**
+- `git diff`  
+  Shows the differences between files that have been changed but not yet committed.
+  ```bash
+  git diff
+  ```
+
+- `git blame`  
+  Shows who last modified each line of a file.
+  ```bash
+  git blame <file>
+  ```
+
+These commands will help you get started with Git for basic version control tasks like managing repositories, creating branches, and collaborating with others.

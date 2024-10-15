@@ -185,6 +185,9 @@ git rebase master
 ### Description:
 Displays a concise, graphical history of all branches, showing their relationship and the commits made on each branch.
 
+Udemy: https://www.udemy.com/course/git-komplett/learn/lecture/25449718#overview
+Chapter: 32
+
 ### Command:
 ```bash
 git log --graph --oneline --branches

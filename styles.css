@@ -3,7 +3,10 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+
+    /*Adjustment from the color-fixes branch for the Rebase:*/
+    /*background-color: #f4f4f4;*/
+    background-color: lightblue;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Stellt sicher, dass Header und Footer an den Rändern fixiert sind */
@@ -96,9 +99,7 @@ footer {
 }
 
 .modal-content {
-    /*Adjustment for the Rebase*/
     background-color: lightblue;
-    /*background-color: white;*/
     padding: 20px;
     border-radius: 5px;
     width: 300px;

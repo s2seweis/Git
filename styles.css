@@ -96,7 +96,9 @@ footer {
 }
 
 .modal-content {
-    background-color: white;
+    /*Adjustment for the Rebase*/
+    background-color: lightblue;
+    /*background-color: white;*/
     padding: 20px;
     border-radius: 5px;
     width: 300px;

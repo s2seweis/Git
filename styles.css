@@ -1,0 +1,126 @@
+/* Grundlegendes Styling für den Body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Stellt sicher, dass Header und Footer an den Rändern fixiert sind */
+    height: 100vh;
+    text-align: center;
+}
+
+/* Styling für den Header */
+header {
+    position: fixed; /* Header am oberen Rand fixieren */
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000; /* Um sicherzustellen, dass der Header immer oben bleibt */
+}
+
+    header a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1.2em;
+    }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+/* Styling für den Container */
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    margin: 80px auto 80px auto; /* Platz für den fixierten Header und Footer */
+    position: relative;
+    z-index: 10; /* Damit der Inhalt über dem Footer liegt */
+}
+
+/* Überschrift-Stil */
+h1 {
+    color: #333;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Text-Stil */
+p {
+    color: #666;
+    font-size: 1.2em;
+}
+
+/* Styling für den Footer */
+footer {
+    position: fixed; /* Footer am unteren Rand fixieren */
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #999;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000; /* Um sicherzustellen, dass der Footer immer unten bleibt */
+}
+
+    footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1em;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+    font-size: 24px;
+    margin-left: auto;
+}
+
+/* Animation for Modal */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    animation: fadeIn 0.3s ease-out;
+}

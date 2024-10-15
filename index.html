@@ -4,106 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
-    <style>
-        /* Grundlegendes Styling für den Body */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Stellt sicher, dass Header und Footer an den Rändern fixiert sind */
-            height: 100vh;
-            text-align: center;
-        }
-
-        /* Styling für den Header */
-        header {
-            position: fixed; /* Header am oberen Rand fixieren */
-            top: 0;
-            width: 100%;
-            background-color: #333;
-            padding: 10px 0;
-            text-align: center;
-            z-index: 1000; /* Um sicherzustellen, dass der Header immer oben bleibt */
-        }
-
-            header a {
-                color: #fff;
-                text-decoration: none;
-                margin: 0 15px;
-                font-size: 1.2em;
-            }
-
-                header a:hover {
-                    text-decoration: underline;
-                }
-
-        /* Styling für den Container */
-        .container {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 30px;
-            width: 90%;
-            max-width: 600px;
-            margin: 80px auto 80px auto; /* Platz für den fixierten Header und Footer */
-            position: relative;
-            z-index: 10; /* Damit der Inhalt über dem Footer liegt */
-        }
-
-        /* Überschrift-Stil */
-        h1 {
-            color: #333;
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        /* Text-Stil */
-        p {
-            color: #666;
-            font-size: 1.2em;
-        }
-
-        /* Styling für den Footer */
-        footer {
-            position: fixed; /* Footer am unteren Rand fixieren */
-            bottom: 0;
-            width: 100%;
-            background-color: #333;
-            color: #999;
-            padding: 10px 0;
-            text-align: center;
-            z-index: 1000; /* Um sicherzustellen, dass der Footer immer unten bleibt */
-        }
-
-            footer a {
-                color: #fff;
-                text-decoration: none;
-                margin: 0 15px;
-                font-size: 1em;
-            }
-
-                footer a:hover {
-                    text-decoration: underline;
-                }
-
-        /* Animation für die Seite */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .container {
-            animation: fadeIn 1s ease-out;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header mit Links -->
@@ -111,6 +12,8 @@
         <a href="#home">Home</a>
         <a href="#about">Über uns</a>
         <a href="#contact">Kontakt</a>
+        <!-- Button to open the modal -->
+        <button id="open-modal">Öffne Modal</button>
     </header>
 
     <!-- Hauptcontainer mit Inhalt -->
@@ -119,11 +22,21 @@
         <p>Willkommen auf meiner ansprechenden HTML-Seite!</p>
     </div>
 
+    <!-- Modal Popup -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <p>Dies ist ein modales Popup!</p>
+        </div>
+    </div>
+
     <!-- Footer mit Links -->
     <footer>
         <a href="#privacy">Datenschutz</a> |
         <a href="#terms">Nutzungsbedingungen</a> |
         <span>&copy; 2024 - Erstellt von Sebastian Weissenborn</span>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

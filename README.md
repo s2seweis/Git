@@ -1,4 +1,4 @@
-Here's an updated version of your `README.md` with **branch-related commands** added:
+Here's the updated `README.md` with **branch-related commands** and the `git log --graph --oneline --branches` command added:
 
 ```markdown
 # Git Command Cheat Sheet
@@ -15,6 +15,7 @@ This `README.md` provides an overview of the most commonly used Git commands to 
 - [Git Checkout](#git-checkout)
 - [Git Merge](#git-merge)
 - [Git Rebase](#git-rebase)
+- [Git Log for Branches](#git-log-for-branches)
 - [Force Flags](#force-flags)
 - [Git Reset](#git-reset)
 
@@ -180,6 +181,22 @@ git rebase master
 
 ---
 
+## Git Log for Branches
+### Description:
+Displays a concise, graphical history of all branches, showing their relationship and the commits made on each branch.
+
+### Command:
+```bash
+git log --graph --oneline --branches
+```
+### Usage:
+```bash
+# View the commit history of all branches with a graphical representation
+git log --graph --oneline --branches
+```
+
+---
+
 ## Force Flags
 ### Description:
 Sometimes Git prevents destructive actions like overwriting commits. Force flags let you override these protections.
@@ -228,4 +245,4 @@ git reset --hard abc123
 This cheat sheet is provided under the MIT License.
 ```
 
-This updated cheat sheet now includes commands for working with Git branches, such as creating, listing, deleting, and switching branches.
+This version now includes the **Git Log for Branches** section with the `git log --graph --oneline --branches` command, giving a concise way to visualize branch history.

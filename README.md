@@ -1,3 +1,5 @@
+Here's an updated version of your `README.md` with **branch-related commands** added:
+
 ```markdown
 # Git Command Cheat Sheet
 
@@ -9,10 +11,12 @@ This `README.md` provides an overview of the most commonly used Git commands to 
 - [Git Commit](#git-commit)
 - [Git Push](#git-push)
 - [Git Pull](#git-pull)
-- [Force Flags](#force-flags)
-- [Git Reset](#git-reset)
+- [Git Branch](#git-branch)
+- [Git Checkout](#git-checkout)
 - [Git Merge](#git-merge)
 - [Git Rebase](#git-rebase)
+- [Force Flags](#force-flags)
+- [Git Reset](#git-reset)
 
 ---
 
@@ -102,6 +106,80 @@ git pull origin master
 
 ---
 
+## Git Branch
+### Description:
+Creates, lists, or deletes branches in your Git repository. A branch allows you to work on new features or fixes independently of the main codebase.
+
+### Commands:
+- `git branch`: Lists all branches.
+- `git branch <branch_name>`: Creates a new branch.
+- `git branch -d <branch_name>`: Deletes a branch.
+
+### Usage:
+```bash
+# List all branches
+git branch
+
+# Create a new branch called 'feature'
+git branch feature
+
+# Delete a branch called 'feature'
+git branch -d feature
+```
+
+---
+
+## Git Checkout
+### Description:
+Switches between branches or restores files. You can use this command to navigate between different branches.
+
+### Command:
+```bash
+git checkout <branch_name>
+```
+### Usage:
+```bash
+# Switch to the 'feature' branch
+git checkout feature
+
+# Create and switch to a new branch
+git checkout -b new_feature
+```
+
+---
+
+## Git Merge
+### Description:
+Merges changes from one branch into another.
+
+### Command:
+```bash
+git merge <branch_name>
+```
+### Usage:
+```bash
+# Merge the 'feature' branch into the current branch
+git merge feature
+```
+
+---
+
+## Git Rebase
+### Description:
+Reapplies commits on top of another base commit. Used to maintain a cleaner commit history.
+
+### Command:
+```bash
+git rebase <branch_name>
+```
+### Usage:
+```bash
+# Rebase the current branch onto the master branch
+git rebase master
+```
+
+---
+
 ## Force Flags
 ### Description:
 Sometimes Git prevents destructive actions like overwriting commits. Force flags let you override these protections.
@@ -140,38 +218,6 @@ git reset --hard abc123
 
 ---
 
-## Git Merge
-### Description:
-Merges changes from one branch into another.
-
-### Command:
-```bash
-git merge <branch_name>
-```
-### Usage:
-```bash
-# Merge the 'feature' branch into the current branch
-git merge feature
-```
-
----
-
-## Git Rebase
-### Description:
-Reapplies commits on top of another base commit. Used to maintain a cleaner commit history.
-
-### Command:
-```bash
-git rebase <branch_name>
-```
-### Usage:
-```bash
-# Rebase the current branch onto the master branch
-git rebase master
-```
-
----
-
 ## Additional Tips:
 - Always ensure your local branches are in sync with remote branches before using `force` flags to avoid data loss.
 - Use `git status` to check the current state of your working directory.
@@ -182,4 +228,4 @@ git rebase master
 This cheat sheet is provided under the MIT License.
 ```
 
-This `README.md` file explains each command with its syntax and an example, providing a quick reference for anyone working with Git.
+This updated cheat sheet now includes commands for working with Git branches, such as creating, listing, deleting, and switching branches.

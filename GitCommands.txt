@@ -1,4 +1,6 @@
+Here’s the updated **Git Commands for Version Control** document with the `git clone` command to clone a specific branch included:
 
+---
 
 ### **Git Commands for Version Control**
 
@@ -23,6 +25,16 @@
   Clones a remote repository to your local machine.
   ```bash
   git clone https://github.com/user/repo.git
+  ```
+
+- **Clone a Specific Branch**  
+  Clones a specific branch from a remote repository.
+  ```bash
+  git clone --single-branch --branch <branch-name> <repository-url>
+  ```
+  Example:
+  ```bash
+  git clone --single-branch --branch CleanCodeDhe https://git.active-logistics.com/dhe/XmlToSql.git
   ```
 
 ---
@@ -100,7 +112,7 @@
   git remote add origin <url>     # Adds a new remote repository
   ```
 
-- **Adding a Second Remote for Multiple Commits**
+- **Adding a Second Remote for Multiple Commits**  
   You can commit and push to multiple repositories by adding a second remote.
 
   1. Add an additional remote repository:
@@ -215,3 +227,6 @@
   git blame <file>
   ```
 
+---
+
+This now includes the command for cloning a specific branch from a repository. Let me know if you need further adjustments!

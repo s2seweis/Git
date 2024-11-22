@@ -1,4 +1,4 @@
-Here’s the updated **Git Commands for Version Control** document with the `git clone` command to clone a specific branch included:
+
 
 ---
 
@@ -226,7 +226,3 @@ Here’s the updated **Git Commands for Version Control** document with the `git
   ```bash
   git blame <file>
   ```
-
----
-
-This now includes the command for cloning a specific branch from a repository. Let me know if you need further adjustments!
